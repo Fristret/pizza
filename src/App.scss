@@ -1,0 +1,297 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: wheat;
+}
+
+.wrapper{
+    width: calc(100vw - 100px);
+    height: 100%;
+    background-color: white;
+    margin: 50px auto;
+    border-radius: 10px;
+    max-width: 1400px;
+    min-width: 1100px;
+}
+
+.container {
+    padding: 0px 50px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 50px 0px 30px;
+
+    &_logo{
+        display: flex;
+        align-items: center;
+
+        img{
+            box-shadow: 0px 0px 1px black; 
+            border-radius: 50%;
+        }
+
+        &_text{
+            margin: 0px 15px;
+
+            h3{
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 24px;
+            }
+
+            p{
+                color: rgb(177, 175, 175);
+                line-height: 20px;
+            }
+        }
+    }
+
+    &_cart{
+        display: flex;
+        box-sizing: content-box;
+
+        &_button{
+            background-color: rgb(255, 120, 4);
+            display: flex;
+            align-items: center;
+            border-radius: 30px;
+            border-style: none;
+            transition: 0.7s;
+
+            svg{
+                padding-bottom: 2px;
+            }
+
+            span{
+                font-weight: 700;
+                font-size: 16px;
+                color: white;
+            }
+        }
+
+        &_button:hover{
+            cursor: pointer;
+            background-color: rgb(220, 100, 4);
+            box-shadow: 0px 0px 10px rgba(92, 71, 1, 0.363);
+        }
+        
+        div{
+            margin: 10px 5px;
+        }
+
+        .sum{
+            border-right: 1px solid #f6f6f6;
+            padding: 5px 10px 5px 15px;
+        }
+
+        .cart{
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 30px;
+        }
+    }
+
+} 
+
+.top_content{
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+
+    .categories{
+            
+        ul{
+            display: flex;
+
+            li{
+                border: 1px solid transparent;
+                border-radius: 30px;
+                background-color: rgb(233, 228, 228);
+                padding: 10px 25px;
+                margin-right: 5px;
+                font-weight: 700;
+                font-size: 16px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .active{
+                background-color: black;
+                color:white;
+            }
+        }
+    }
+
+    .sort{
+        position: relative;
+        
+        &_label{
+            display: flex;
+            align-items: center;
+
+            svg{
+                margin-right: 5px;
+                margin-top: 2px;
+            }
+
+            b{
+                margin-right: 5px;
+                border-bottom: 1px solid transparent;
+            }
+
+            span{
+                font-weight: 400;
+
+                color:rgb(255, 120, 4);
+                border-bottom: 1px dashed rgb(255, 120, 4);
+                cursor: pointer;
+            }
+        }
+
+        &_popup{
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.09);
+            border-radius: 10px;
+            max-width: 160px;
+            position: absolute;
+            right: 0;
+            margin-top: 15px;
+            background: #ffffff;
+
+            ul{
+                padding: 10px 0px;
+
+                li{
+                    padding: 10px 15px;
+                    cursor: pointer;
+
+                    &.active,
+                    &:hover {
+                      background: rgba(254, 95, 30, 0.05);
+                    }
+            
+                    &.active {
+                      font-weight: bold;
+                      color: rgb(255, 120, 4);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content{
+    padding:40px 0px;
+
+    h1{
+        font-size: 32px;
+        font-weight: 800;
+    }
+
+    &_box{
+        margin: 40px 0px;
+        display: flex;
+        overflow: auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &_pizza{
+            text-align: center;
+
+            p{
+                font-weight: 800;
+                font-size: 20px;
+
+                margin-bottom: 20px;
+            }
+            
+            .parameters{
+                background-color: rgb(232, 230, 230, 0.6);
+                border-radius: 10px;
+                width: 280px;
+
+                ul{
+                    display: flex;
+                    padding: 5px;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 14px;
+
+                    li{
+                        box-sizing: border-box;
+                        width: 50%;
+
+                        &.active{
+                            padding: 7px 0px 8px;
+                            margin: 0px 5px;
+                            border-radius: 5px;
+                            background-color: white;
+                            box-shadow: 0px 0px 10px rgb(0, 0,0, 0.1);
+                        }
+
+                        &.inactive:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .down{
+                margin: 15px auto;
+                display: flex;
+                justify-content: space-between;
+
+                p{
+                    font-weight: 700;
+                    font-size: 22px;
+                }
+
+                button{
+                    height: 35px;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    background-color: transparent;
+                    border: 2px rgb(255, 120, 4) solid;
+
+                    svg{
+                        margin: 0px 10px 0px 15px;
+                        fill: rgb(255, 120, 4);
+                    }
+
+                    span{
+                        margin-right: 20px;
+                        color: rgb(255, 120, 4);
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+
+                    &:hover{
+                        background-color: rgb(255, 120, 4);
+
+                        span{
+                            color: white;
+                        }
+
+                        svg{
+                            fill: white;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
